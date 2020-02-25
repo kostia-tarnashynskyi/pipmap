@@ -1,4 +1,5 @@
-[![PyPI license](https://img.shields.io/pypi/l/pipmap.svg)](https://pypi.python.org/pypi/pipmap/)
+[![PyPI license](https://img.shields.io/pypi/l/pipmap.svg)](https://pypi.python.org/pypi/pipmap/) 
+[![PyPI version fury.io](https://badge.fury.io/py/pipmap.svg)](https://pypi.python.org/pypi/pipmap/)
 
 # pipmap
 Mapping package with its top level modules
