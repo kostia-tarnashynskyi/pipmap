@@ -13,7 +13,7 @@ def test_suite():
 
 setuptools.setup(
     name="pipmap",
-    version="0.0.2",
+    version="0.0.3",
     author="Kostiantyn Tarnashynskyi",
     author_email="kostia.tarnashynskyi@gmail.com",
     description="Mapping the installed packages with its top level modules",

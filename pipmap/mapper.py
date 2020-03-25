@@ -81,6 +81,8 @@ class Mapper:
         else:
             self.log.error(f"Package dir not found for {name}:{version}")
 
+        return None
+
     def _read(self, path: str) -> any:
         """
         Read file from path and returns striped lines
@@ -155,6 +157,8 @@ class Mapper:
         :return:
         """
         _pkg_location = self._get_pkg_path(name, version)
+        if _pkg_location is None:
+            return
         self.log.debug(f"pkg{name}:{version} | location: {_pkg_location}")
         _pkg_meta = self._get_pkg_meta(_pkg_location)
         self.log.debug(f"pkg{name}:{version} | meta: {_pkg_meta}")
