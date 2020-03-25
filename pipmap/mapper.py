@@ -71,13 +71,20 @@ class Mapper:
         :return: path of the package location
         """
         pkg_path_tmpl = "{name}-{version}.{suffix}-info"
+        pkg_path_tmpl2 = "{name}_{version}.{suffix}-info"
         suffixes = ["egg", "dist"]
         for suf in suffixes:
             _pkg_location = pkg_path_tmpl.format(name=name, version=version, suffix=suf)
             _pkg_path = os.path.join(self._site_pkgs, _pkg_location)
+            _pkg_location2 = pkg_path_tmpl2.format(name=name, version=version, suffix=suf)
+            _pkg_path2 = os.path.join(self._site_pkgs, _pkg_location2)
             self.log.debug(f"pkg:{name}:{version} check location {_pkg_path}")
+            self.log.debug(f"pkg:{name}:{version} check location {_pkg_path2}")
             if os.path.exists(_pkg_path):
                 return _pkg_path
+            elif os.path.exists(_pkg_path2):
+                return _pkg_path2
+
         else:
             self.log.error(f"Package dir not found for {name}:{version}")
 
