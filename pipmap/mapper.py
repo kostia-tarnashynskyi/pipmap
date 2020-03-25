@@ -79,7 +79,7 @@ class Mapper:
             if os.path.exists(_pkg_path):
                 return _pkg_path
         else:
-            raise Exception(f"Package dir not found for {name}:{version}")
+            self.log.error(f"Package dir not found for {name}:{version}")
 
     def _read(self, path: str) -> any:
         """
